@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sphere Volume Calculator</title>
+</head>
+<body>
+<form id="sphereForm">
+<label for="inputField">Enter the radius of the sphere:</label>
+<input type="number" id="inputField">
+<input type="button" value="Calculate Volume"
+onclick="calculateSphereVolume()">
+</form>
+<p id="result"></p>
+<script>
+function calculateSphereVolume() {
+var radiusInput = document.getElementById('inputField');
+var radius = parseFloat(radiusInput.value); 
+var volume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
+var resultParagraph = document.getElementById('result');
+resultParagraph.textContent = 'The volume of the sphere is: ' + 
+volume.toFixed(2);
+}
+</script>
+</body>
+</html>
